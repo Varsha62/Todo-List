@@ -93,3 +93,10 @@ body{
 .icon-delete:hover{
   color: red;
 }
+.empty-list-message{
+  color: white;
+  margin-top: 20px;
+  padding-top: 10px;
+  font-size: 25px;
+
+}

@@ -36,15 +36,20 @@ function App() {
         <TodoInput addList={addList}/>
         <h1 className="app-heading">TODO</h1>
         <hr/>
-        {listTodo.map((listItem,i)=>{
-          return (
-            <TodoList key={i} index={i} item={listItem} deleteItem={deleteListItem}/>
-          )
-        })}
+        {listTodo.length === 0 ? (
+          <p className="empty-list-message">Todo list is empty.......</p>
+        ) : (
+          listTodo.map((listItem,i)=>{
+            return (
+              <TodoList key={i} index={i} item={listItem} deleteItem={deleteListItem}/>
+            )
+          })
+        )}
       </div>
     </div>
   );
 }
 
 export default App;
+
 
